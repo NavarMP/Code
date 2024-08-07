@@ -1,0 +1,94 @@
+<!--Design a webpage using internal style sheet for setting styles to
+heading, body and table.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https//fonts.googleapis.com/css?family=Popppins">
+    <title>Internal Style Sheet</title>
+    <style>
+        body {
+            font-family: 'Poppins', helvetica;
+            background-color: lightgreen;
+            margin: 30;
+            padding: 20;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            color: red;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: green;
+        }
+        h3 {
+            font-size: 18px;
+            color: orange;
+        }
+
+        table {
+            background-color:yellow;
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: lightblue;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0078d4;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Internal Style Sheet</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Football</h2>
+            <p>Football is a family of team sports that involve, to varying degrees, kicking a ball to score a goal.</p>
+        </section>
+        <section>
+            <h3>Footballer</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player Name</th>
+                        <th>Country</th>
+                        <th>Club</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://en.wikipedia.org/wiki/Lionel_Messi">Messi</a></td>
+                        <td>Argentina</td>
+                        <td>Inter Miami FC</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://en.wikipedia.org/wiki/Sunil_Chhetri">Sunil Chhetri</a></td>
+                        <td>India</td>
+                        <td>Bengaluru FC</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

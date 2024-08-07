@@ -1,0 +1,51 @@
+<!--Create a webpage for student registration form(include address, gender(radio
+button),qualification(select box),languages known(checkbox))-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href=https://fonts.googleapis.com/css?family=Poppins">
+    <style>
+        body {
+            font-family: 'poppins', Helvetica;
+            text-align: left;
+        }
+    </style>
+<body>
+    <h1>Student Registration form</h1>
+    <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="address">Address</label>
+        <textarea id="address" row="5" cols="30"></textarea><br> <br>
+
+        <label for="gender">Gender</label>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male" >Male</label>
+        <input type="radio" id="female" name="gender">
+
+        <label for="qualification">Qualification</label>
+        <select id="qualification" name="qualification">
+            <option value="PG">Postgraduate</option>
+            <option value="UG">Undergraduate</option>
+            <option value="Plus Two">Plus Two</option>
+            <option value="SSLC">SSLC</option>
+        </select><br><br>
+
+        <label for="language">Language</label>
+        <input type="checkbox" id="english" name="lang" value="English">
+        <label for="english">English</label><br>
+        <input type="checkbox" id="malayalam" name="lang" value="Malayalam">
+        <label for="malayalam">Malayalam</label>
+        <input type="checkbox" id="hindi" name="lang" value="Hindi">
+        <label for="hindi">Hindi</label>
+
+        <input type="submit" value="submit">
+        <input type="reset" value="clear">
+    </form>
+</body>
+</html>

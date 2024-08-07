@@ -1,0 +1,50 @@
+<!--Show the following table in a webpage-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Time</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <style>
+        body {
+            font-family: 'Poppins', helvetica;
+        }
+        /* Use a more specific selector to target the table */
+        .train-table {
+            text-align: center;
+            border-collapse: collapse;
+        }
+        /* Use a more specific selector to target the table headers and cells */
+        .train-table th, .train-table td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <table class="train-table">
+        <thead>
+            <tr>
+                <th rowspan="2">Train Name</th>
+                <th rowspan="2">Source</th>
+                <th rowspan="2">Destination</th>
+                <th colspan="2">Time</th>
+            </tr>
+            <tr>
+                <th>Arrival</th>
+                <th>Departure</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
