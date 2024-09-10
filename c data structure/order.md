@@ -1,5 +1,6 @@
 ### Lab order
 
+#### Serial number. program order number.program name (pdf number [pdf page number])
 1. 4.Append 2 arrays (pdf 5 [page 11])
 2. 13.Stack using array (14 [p 38])
 3. 14.Stack using Linked list (15 [p 41])
@@ -17,14 +18,14 @@
 15. 18.Traverse a binary search tree in pre-order (not available)
 16. 19.Traverse a binary search tree in order (not available)
 17. 20.Traverse a binary search tree in post-order (not available)
-17. 21.Search an element in a binary search tree (not available)
-18. 22.Implement exchange sort (22 [p 61])
-19. 23.Implement selection sort (23 [p 63])
-20. 24.Implement insertion sort (24 [p 64])
-21. 25.Implement quick sort (25 [p 65])
-22. 1.Sort a given list of strings (not available)
-23. 2.Reverse a string using pointers (2 [p 5])
-24. 3.Implement Pattern matching algorithm (3 [p 7])
+18. 21.Search an element in a binary search tree (not available)
+19. 22.Implement exchange sort (22 [p 61])
+20. 23.Implement selection sort (23 [p 63])
+21. 24.Implement insertion sort (24 [p 64])
+22. 25.Implement quick sort (25 [p 65])
+23. 1.Sort a given list of strings (not available)
+24. 2.Reverse a string using pointers (2 [p 5])
+25. 3.Implement Pattern matching algorithm (3 [p 7])
 
 # Part A: DATA STRUCTURES USING C
 
@@ -45,7 +46,7 @@
 15. Evaluation of postfix expression
 16. Implement Queue using array
 17. Implement Queue using linked list
-18. Traverse a binary search tree in pr-order
+18. Traverse a binary search tree in pre-order
 19. Traverse a binary search tree in order
 20. Traverse a binary search tree in post-order
 21. Search an element in a binary search tree
