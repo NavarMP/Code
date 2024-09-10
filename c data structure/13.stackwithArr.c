@@ -5,7 +5,6 @@
 void push(int stack[], int *top, int n);
 void pop(int stack[], int *top);
 void display(int stack[], int top);
-
 int main() {
     int stack[MAX_SIZE], top = -1, choice, n;
 
@@ -22,7 +21,7 @@ int main() {
     printf("\n\t 1. PUSH\n\t 2. POP\n\t 3. DISPLAY\n\t 4. EXIT");
 
     do {
-        printf("\n Enter the Choice: ");
+        printf("\n Choose an options: ");
         scanf("%d", &choice);
 
         switch (choice) {

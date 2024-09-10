@@ -1,10 +1,11 @@
 ### Lab order
-4. Append 2 arrays (pdf 5)
+
+4. Append 2 arrays (pdf 5 [page 11])
 13. Stack using array (14)
-14. Stack using Linked list (15)
+14. Stack using Linked list (15 [p 41])
 16. Queue using array (17)
 17. Queue using Linked list (18)
-7. Create and display a singly linked list of n nodes (10)
+7. Create and display a singly linked list of n nodes (not available -10 [p 20])
 8. Delete a given node from a singly linked list (not available)
 9. Sort a singly linked list (not available)
 10. Create a singly linked list and search an element (not available)
@@ -22,9 +23,8 @@
 24. Implement insertion sort (24)
 25. Implement quick sort (25)
 1. Sort a given list of strings (not available)
-2. Reverse a string using pointers
-3. Implement Pattern matching algorithm
-
+2. Reverse a string using pointers (2)
+3. Implement Pattern matching algorithm (3)
 
 # Part A: DATA STRUCTURES USING C
 

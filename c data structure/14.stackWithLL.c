@@ -19,6 +19,7 @@ void empty();
 int topelement();
 
 int main() {
+    printf ("Create your stack and perform operations on it\n");
     int choice, data;
 
     create();
