@@ -1,4 +1,4 @@
-//program to append 2 arrays
+//1. 4. Append 2 arrays
 
 #include <stdio.h>
 

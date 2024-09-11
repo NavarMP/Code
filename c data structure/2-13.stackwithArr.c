@@ -1,3 +1,5 @@
+//2. 13. Stack using array
+
 #include <stdio.h>
 
 #define MAX_SIZE 100
