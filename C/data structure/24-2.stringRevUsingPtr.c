@@ -1,39 +1,41 @@
-//24. 2.Reverse a string using pointers
+// 24. Reverse a string using pointers
 
-#include<stdio.h>
-int string_length(char*);
-void reverse(char*);
-main()
+#include <stdio.h>
+#include <string.h>
+
+int string_length(const char*); // added const keyword
+void reverse(char*); // function prototype
+
+int main()
 {
- char s[100];
- printf("Enter a string\n");
- gets(s);
- reverse(s);
- printf("Reverse of the string is \"%s\".\n", s);
- return 0;
+    char s[100];
+    printf("Enter a string: ");
+    fgets(s, sizeof(s), stdin); // replaced gets with fgets for safety
+    reverse(s);
+    printf("Reverse of the string is \"%s\".\n", s);
+    return 0;
 }
+
 void reverse(char *s)
 {
- int length, c;
- char *begin, *end, temp;
- length = string_length(s);
- begin = s;
- end = s;
- for (c = 0; c < length - 1; c++)
- end++;
- for (c = 0; c < length/2; c++)
- {
- temp = *end;
- *end = *begin;
- *begin = temp;
- begin++;
- end--;
- }
-} 
-int string_length(char *pointer)
+    int length = string_length(s);
+    char *begin = s;
+    char *end = s + length - 1; // calculate end pointer directly
+
+    while (begin < end)
+    {
+        char temp = *end;
+        *end = *begin;
+        *begin = temp;
+        begin++;
+        end--;
+    }
+}
+
+int string_length(const char *pointer)
 {
- int c = 0;
- while( *(pointer + c) != '\0' )
- c++;
- return c;
+    int c = 0;
+    while (*(pointer + c) != '\0')
+        c++;
+    return c;
 }

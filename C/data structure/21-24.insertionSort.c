@@ -1,28 +1,50 @@
-//21. 24.Implement insertion sort
+// 21. 24. Implement insertion sort
 
 #include <stdio.h>
-int main()
-{
- int n, array[1000], c, d, t;
- printf("Enter number of elements\n");
- scanf("%d", &n);
- printf("Enter %d integers\n", n);
- for (c = 0; c < n; c++)
- scanf("%d", &array[c]);
- for (c = 1 ; c <= n - 1; c++)
- {
- d = c;
- while ( d > 0 && array[d-1] > array[d])
- {
- t = array[d];
- array[d] = array[d-1];
- array[d-1] = t;
- d--;
- }
- }
- printf("Sorted list in ascending order:\n");
- for (c = 0; c <= n - 1; c++) {
- printf("%d\n", array[c]);
- }
- return 0;
+
+#define MAX_ARRAY_SIZE 1000
+
+void printArray(int array[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d\n", array[i]);
+    }
+}
+
+void insertionSort(int array[], int size) {
+    for (int i = 1; i < size; i++) {
+        int key = array[i];
+        int j = i - 1;
+
+        while (j >= 0 && array[j] > key) {
+            array[j + 1] = array[j];
+            j--;
+        }
+
+        array[j + 1] = key;
+    }
+}
+
+int main() {
+    int n;
+    int array[MAX_ARRAY_SIZE];
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    if (n > MAX_ARRAY_SIZE) {
+        printf("Error: Array size exceeds maximum capacity (%d)\n", MAX_ARRAY_SIZE);
+        return 1;
+    }
+
+    printf("Enter %d integers: ", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &array[i]);
+    }
+
+    insertionSort(array, n);
+
+    printf("Sorted list in ascending order:\n");
+    printArray(array, n);
+
+    return 0;
 }

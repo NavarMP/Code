@@ -1,41 +1,65 @@
-//22. 25.Implement quick sort
+// 22. 25. Implement quick sort
 
-#include<stdio.h>
-void quicksort(int number[25],int first,int last){
- int i, j, pivot, temp;
- if(first<last){
- pivot=first;
- i=first;
- j=last;
- while(i<j){
- while(number[i]<=number[pivot]&&i<last)
- i++;
- while(number[j]>number[pivot])
- j--;
- if(i<j){
- temp=number[i];
- number[i]=number[j];
- number[j]=temp;
- }
- }
- temp=number[pivot];
- number[pivot]=number[j];
- number[j]=temp;
- quicksort(number,first,j-1);
- quicksort(number,j+1,last);
- }
+#include <stdio.h>
+
+// Function to swap two elements
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
-int main()
-{
- int i, count, number[25];
- printf("How many elements are u going to enter?: ");
- scanf("%d",&count);
- printf("Enter %d elements: ", count);
- for(i=0;i<count;i++)
- scanf("%d",&number[i]);
- quicksort(number,0,count-1);
- printf("Order of Sorted elements: ");
- for(i=0;i<count;i++)
- printf(" %d",number[i]);
- return 0;
+
+// Function to partition the array
+int partition(int arr[], int low, int high) {
+    int pivot = arr[low];
+    int i = low + 1;
+    int j = high;
+
+    while (1) {
+        while (i <= high && arr[i] <= pivot)
+            i++;
+        while (j >= low && arr[j] > pivot)
+            j--;
+
+        if (i >= j)
+            break;
+
+        swap(&arr[i], &arr[j]);
+    }
+
+    swap(&arr[low], &arr[j]);
+    return j;
+}
+
+// Function to implement quick sort
+void quicksort(int arr[], int low, int high) {
+    if (low < high) {
+        int pivot = partition(arr, low, high);
+        quicksort(arr, low, pivot - 1);
+        quicksort(arr, pivot + 1, high);
+    }
+}
+
+int main() {
+    int count, number[25];
+
+    printf("How many elements are you going to enter?: ");
+    scanf("%d", &count);
+
+    if (count > 25) {
+        printf("Error: Maximum 25 elements can be entered.\n");
+        return 1;
+    }
+
+    printf("Enter %d elements: ", count);
+    for (int i = 0; i < count; i++)
+        scanf("%d", &number[i]);
+
+    quicksort(number, 0, count - 1);
+
+    printf("Order of Sorted elements: ");
+    for (int i = 0; i < count; i++)
+        printf(" %d", number[i]);
+
+    return 0;
 }

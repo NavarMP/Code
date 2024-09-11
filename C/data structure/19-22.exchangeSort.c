@@ -1,36 +1,41 @@
-//19. 22.Implement exchange sort
+// Implement exchange sort
 
 #include <stdio.h>
-void sort( int [], int );
-void sort( int a[], int elements )
-{
-int i, j, temp;
-i = 0;
-while( i < (elements - 1) )
-{
-j = i + 1;
-while( j < elements )
-{
-if( a[i] > a[j] )
-{
-temp = a[i];
-a[i] = a[j];
-a[j] = temp;
+
+// Function to swap two elements
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
-j++;
+
+// Function to perform exchange sort
+void exchange_sort(int a[], int elements) {
+    int i, j;
+    for (i = 0; i < elements - 1; i++) {
+        for (j = i + 1; j < elements; j++) {
+            if (a[i] > a[j]) {
+                swap(&a[i], &a[j]);
+            }
+        }
+    }
 }
-i++;
-}
-}
-main()
-{
-int numbers[] = { 10, 9, 8, 23, 19, 11, 2, 7, 1, 13, 12 };
-int loop;
-printf("Before the sort the array was \n");
-for( loop = 0; loop < 11; loop++ )
-printf(" %d ", numbers[loop] );
-sort( numbers, 11 );
-printf("\nAfter the sort the array was \n");
-for( loop = 0; loop < 11; loop++ )
-printf(" %d ", numbers[loop] );
+
+int main() {
+    int numbers[] = { 10, 9, 8, 23, 19, 11, 2, 7, 1, 13, 12 };
+    int elements = sizeof(numbers) / sizeof(numbers[0]);
+
+    printf("Before the sort the array was:\n");
+    for (int i = 0; i < elements; i++) {
+        printf(" %d ", numbers[i]);
+    }
+
+    exchange_sort(numbers, elements);
+
+    printf("\nAfter the sort the array was:\n");
+    for (int i = 0; i < elements; i++) {
+        printf(" %d ", numbers[i]);
+    }
+
+    return 0;
 }
