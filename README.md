@@ -1,3 +1,5 @@
+[vscode.dev link](https://vscode.dev/github/NavarMP/Code/blob/main)
+
 # C
 
 1. lab 1

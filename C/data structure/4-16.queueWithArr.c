@@ -1,13 +1,18 @@
 //4. 16.Queue using array
 
 #include <stdio.h>
-#include <conio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 #define QUEUE_SIZE 10
 
-int queue [QUEUE_SIZE];
-int front = -1, rear = -1;
+typedef struct {
+    int data[QUEUE_SIZE];
+    int front;
+    int rear;
+} Queue;
+
+Queue queue;
 
 // Function prototypes
 void enQueue(int value);
@@ -18,47 +23,53 @@ void printMenu();
 
 // Function to add an element to the queue
 void enQueue(int value) {
-    if (rear == QUEUE_SIZE - 1) {
+    if ((queue.rear + 1) % QUEUE_SIZE == queue.front) {
         printf("Queue is full. Cannot add element %d.\n", value);
         return;
     }
-    if (front == -1) {
-        front = 0;
+    if (queue.front == -1) {
+        queue.front = 0;
     }
-    rear++;
-    queue[rear] = value;
+    queue.rear = (queue.rear + 1) % QUEUE_SIZE;
+    queue.data[queue.rear] = value;
 }
 
 // Function to remove an element from the queue
 void deQueue() {
-    if (front == -1) {
+    if (queue.front == -1) {
         printf("Queue is empty. Cannot remove element.\n");
         return;
     }
-    printf("Removed element: %d\n", queue[front]);
-    front++;
-    if (front > rear) {
-        front = rear = -1;
+    printf("Removed element: %d\n", queue.data[queue.front]);
+    if (queue.front == queue.rear) {
+        queue.front = queue.rear = -1;
+    } else {
+        queue.front = (queue.front + 1) % QUEUE_SIZE;
     }
 }
 
 // Function to display the queue
 void display() {
-    if (front == -1) {
+    if (queue.front == -1) {
         printf("Queue is empty.\n");
         return;
     }
-    printf("Queue elements: ");
-    for (int i = front; i <= rear; i++) {
-        printf("%d ", queue[i]);
+    int i = queue.front;
+    while (i != queue.rear) {
+        printf("%d ", queue.data[i]);
+        i = (i + 1) % QUEUE_SIZE;
     }
-    printf("\n");
+    printf("%d\n", queue.data[queue.rear]);
 }
 
 // Function to get menu choice from user
 int getMenuChoice() {
     int choice;
-    printf("Enter your choice: ");
+    printf("Enter your choice:\n");
+    printf("1. Enqueue\n");
+    printf("2. Dequeue\n");
+    printf("3. Display\n");
+    printf("4. Exit\n");
     scanf("%d", &choice);
     return choice;
 }
@@ -66,6 +77,7 @@ int getMenuChoice() {
 // Function to print the menu
 void printMenu() {
     printf("Queue Operations\n");
+    printf("---------------\n");
     printf("1. Enqueue\n");
     printf("2. Dequeue\n");
     printf("3. Display\n");
@@ -73,18 +85,20 @@ void printMenu() {
 }
 
 int main() {
-    int menuChoice;
-    clrscr();
-    while (true) {
+    queue.front = queue.rear = -1;
+    printf("Create queue using array\n");
+    int choice;
+    while (1) {
         printMenu();
-        menuChoice = getMenuChoice();
-        switch (menuChoice) {
-            case 1:
-                int insertValue;
-                printf("Enter the value to be inserted: ");
-                scanf("%d", &insertValue);
-                enQueue(insertValue);
+        choice = getMenuChoice();
+        switch (choice) {
+            case 1: {
+                int value;
+                printf("Enter a value to enqueue: ");
+                scanf("%d", &value);
+                enQueue(value);
                 break;
+            }
             case 2:
                 deQueue();
                 break;

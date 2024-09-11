@@ -17,14 +17,15 @@ int main() {
     }
 
     printf("Enter %d elements: ", count);
-    for (int i = 0; i < count; i++) {
+    int i, j;
+    for (i = 0; i < count; i++) {
         scanf("%d", &number[i]);
     }
 
     // Selection sort algorithm
-    for (int i = 0; i < count - 1; i++) {
+    for (i = 0; i < count - 1; i++) {
         int min_idx = i;
-        for (int j = i + 1; j < count; j++) {
+        for (j = i + 1; j < count; j++) {
             if (number[j] < number[min_idx]) {
                 min_idx = j;
             }
@@ -37,7 +38,7 @@ int main() {
     }
 
     printf("Sorted elements: ");
-    for (int i = 0; i < count; i++) {
+    for (i = 0; i < count; i++) {
         printf(" %d", number[i]);
     }
     printf("\n");

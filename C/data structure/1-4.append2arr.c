@@ -31,6 +31,7 @@ void mergeArrays (int a[], int b[], int merged[], int aSize, int bSize) {
     }
 }
 int main () {
+    printf ("Append two arrays");
     const int maxSize = 10;
     int a[maxSize], b[maxSize], merged[maxSize * 2];
     int aSize, bSize;
