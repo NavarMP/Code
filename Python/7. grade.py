@@ -1,0 +1,12 @@
+#show grade from marks
+print ('Find your Grade')
+mark = int (input ('Enter your mark: '))
+print ('Your grade: ')
+if mark > 90: print ('A+')
+elif mark > 80 and mark < 90: print ('A')
+elif mark > 70 and mark < 80: print ('B+')
+elif mark > 60 and mark < 70: print ('B')
+elif mark > 50 and mark < 60: print ('C+')
+elif mark > 40 and mark < 50: print ('C')
+elif mark > 30 and mark < 40: print ('D+')
+else: print ('F')

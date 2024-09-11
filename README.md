@@ -21,7 +21,7 @@
 19. lab 19
 20. lab 20
 
-# Data Structures using C
+## Data Structure
 
 1. Append 2 arrays
 2. Stack using array
