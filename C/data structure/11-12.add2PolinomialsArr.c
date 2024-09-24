@@ -1,4 +1,4 @@
-//11. 12.Addition of 2 polynomials using array
+// 11. 12.Addition of 2 polynomials using array
 
 #include <stdio.h>
 
@@ -30,20 +30,33 @@ void printPolynomial(int poly[], int degree) {
 
 int main() {
     printf ("Addition of 2 polynomials using array\n");
-    int poly1[] = {3, 2, 1}; // represents 1x^2 + 2x + 3
-    int poly2[] = {2, 4}; // represents 4x + 2
-    int degree1 = sizeof(poly1) / sizeof(poly1[0]) - 1;
-    int degree2 = sizeof(poly2) / sizeof(poly2[0]) - 1;
+    
+    int degree1, degree2;
+    printf("Enter the degree of polynomial 1: ");
+    scanf("%d", &degree1);
+    int poly1[degree1 + 1];
+    for (int i = degree1; i >= 0; i--) {
+        printf("Enter coefficient of x^%d: ", i);
+        scanf("%d", &poly1[i]);
+    }
+
+    printf("Enter the degree of polynomial 2: ");
+    scanf("%d", &degree2);
+    int poly2[degree2 + 1];
+    for (int i = degree2; i >= 0; i--) {
+        printf("Enter coefficient of x^%d: ", i);
+        scanf("%d", &poly2[i]);
+    }
+
     int result[degree1 > degree2 ? degree1 + 1 : degree2 + 1];
+    addPolynomials(poly1, poly2, degree1, degree2, result);
 
     printf("Polynomial 1: ");
     printPolynomial(poly1, degree1);
     printf("Polynomial 2: ");
     printPolynomial(poly2, degree2);
-
-    addPolynomials(poly1, poly2, degree1, degree2, result);
     printf("Result: ");
-    printPolynomial(result, (degree1 > degree2) ? degree1 : degree2);
+    printPolynomial(result, degree1 > degree2 ? degree1 : degree2);
 
     return 0;
 }

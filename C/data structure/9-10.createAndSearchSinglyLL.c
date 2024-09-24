@@ -56,20 +56,25 @@ void printList(Node* head) {
 }
 
 int main() {
-    printf ("Create a singly linked list and search an element");
     Node* head = NULL;
+    int numNodes;
+    printf("Enter the number of nodes: ");
+    scanf("%d", &numNodes);
 
-    // Create a linked list: 1 -> 2 -> 3 -> 4 -> 5
-    insertNode(&head, 1);
-    insertNode(&head, 2);
-    insertNode(&head, 3);
-    insertNode(&head, 4);
-    insertNode(&head, 5);
+    for (int i = 0; i < numNodes; i++) {
+        int data;
+        printf("Enter node %d data: ", i + 1);
+        scanf("%d", &data);
+        insertNode(&head, data);
+    }
 
     printf("Linked List: ");
     printList(head);
 
-    int key = 3;
+    int key;
+    printf("Enter the element to search: ");
+    scanf("%d", &key);
+
     int found = searchElement(head, key);
     if (found) {
         printf("Element %d found in the linked list.\n", key);

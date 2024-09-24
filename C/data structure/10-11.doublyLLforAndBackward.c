@@ -65,11 +65,16 @@ int main() {
     printf ("Create a doubly linked list of integers and display in forward and backward direction\n");
     
     Node* head = NULL;
-    insertNode(&head, 1);
-    insertNode(&head, 2);
-    insertNode(&head, 3);
-    insertNode(&head, 4);
-    insertNode(&head, 5);
+    int numNodes;
+    printf("Enter the number of nodes: ");
+    scanf("%d", &numNodes);
+
+    for (int i = 0; i < numNodes; i++) {
+        int data;
+        printf("Enter node %d data: ", i + 1);
+        scanf("%d", &data);
+        insertNode(&head, data);
+    }
 
     printf("Forward direction: ");
     displayForward(head);

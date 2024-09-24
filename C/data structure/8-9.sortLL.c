@@ -1,74 +1,90 @@
-// 8. 9. Sort a singly linked list
+// 8. 9. Sort a singly linked list (bubble sort)
 
 #include <stdio.h>
-#include <conio.h>
 #include <stdlib.h>
 
-#define SIZE 5
+// Define the structure for a node in the linked list
+typedef struct Node {
+    int data;
+    struct Node* next;
+} Node;
 
-// Function prototypes
-void enQueue(int value);
-void deQueue();
-void display();
+// Function to insert a new node at the end of the linked list
+void insertNode(Node** head, int data) {
+    Node* newNode = (Node*)malloc(sizeof(Node));
+    newNode->data = data;
+    newNode->next = NULL;
 
-// Circular queue implementation
-int cQueue[SIZE];
-int front = -1;
-int rear = -1;
+    if (*head == NULL) {
+        *head = newNode;
+    } else {
+        Node* current = *head;
+        while (current->next != NULL) {
+            current = current->next;
+        }
+        current->next = newNode;
+    }
+}
+
+// Function to sort the linked list using bubble sort
+void sortList(Node** head) {
+    int swapped;
+    Node* current;
+    Node* nextNode;
+
+    if (*head == NULL) {
+        return;
+    }
+
+    do {
+        swapped = 0;
+        current = *head;
+
+        while (current->next != NULL) {
+            nextNode = current->next;
+
+            if (current->data > nextNode->data) {
+                int temp = current->data;
+                current->data = nextNode->data;
+                nextNode->data = temp;
+                swapped = 1;
+            }
+
+            current = current->next;
+        }
+    } while (swapped);
+}
+
+// Function to print the linked list
+void printList(Node* head) {
+    while (head != NULL) {
+        printf("%d ", head->data);
+        head = head->next;
+    }
+    printf("\n");
+}
 
 int main() {
-    printf ("Sort a singly linked list\n");
+    Node* head = NULL;
+    int numNodes;
+    printf("Enter the number of nodes: ");
+    scanf("%d", &numNodes);
 
-    int choice, value;
-    while (1) {
-        printf("\n****** MENU ******\n");
-        printf("1. Insert\n2. Delete\n3. Display\n4. Exit\n");
-        printf("Enter your choice: ");
-        scanf("%d", &choice);
-
-        switch (choice) {
-            case 1:
-                printf("\nEnter the value to be inserted: ");
-                scanf("%d", &value);
-                enQueue(value);
-                break;
-            case 2:
-                deQueue();
-                break;
-            case 3:
-                display();
-                break;
-            case 4:
-                exit(0);
-            default:
-                printf("\nPlease select the correct choice!!!\n");
-        }
+    for (int i = 0; i < numNodes; i++) {
+        int data;
+        printf("Enter node %d data: ", i + 1);
+        scanf("%d", &data);
+        insertNode(&head, data);
     }
 
-    return 0; // Added return statement
-}
+    printf("Original list: ");
+    printList(head);
 
-void enQueue(int value) {
-    if ((front == 0 && rear == SIZE - 1) || (front == rear + 1)) {
-        printf("\nCircular Queue is Full! Insertion not possible!!!\n");
-    } else {
-        if (rear == SIZE - 1 && front != 0) {
-            rear = -1;
-        }
-        cQueue[++rear] = value;
-        printf("\nInsertion Success!!!\n");
-        if (front == -1) {
-            front = 0;
-        }
-    }
-}
+    // Sort the linked list
+    sortList(&head);
 
-void deQueue() {
-    // TO DO: implement deQueue function
-    printf("\nDequeue not implemented yet!\n");
-}
+    printf("Sorted list: ");
+    printList(head);
 
-void display() {
-    // TO DO: implement display function
-    printf("\nDisplay not implemented yet!\n");
+    return 0;
 }
