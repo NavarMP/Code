@@ -74,6 +74,8 @@ int evaluatePostfix(char* postfix) {
 }
 
 int main() {
+    printf ("Evaluation of postfix expression\n");
+    
     char postfix[MAX_SIZE];
     printf("Enter a postfix expression: ");
     fgets(postfix, MAX_SIZE, stdin);

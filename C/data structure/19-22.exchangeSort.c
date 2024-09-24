@@ -22,6 +22,8 @@ void exchange_sort(int a[], int elements) {
 }
 
 int main() {
+    printf ("Implement exchange sort\n");
+
     int numbers[] = { 10, 9, 8, 23, 19, 11, 2, 7, 1, 13, 12 };
     int elements = sizeof(numbers) / sizeof(numbers[0]);
 

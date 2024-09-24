@@ -41,6 +41,8 @@ void quicksort(int arr[], int low, int high) {
 }
 
 int main() {
+    printf ("Implement quick sort\n");
+
     int count, number[25];
 
     printf("How many elements are you going to enter?: ");

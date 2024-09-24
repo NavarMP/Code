@@ -8,7 +8,8 @@ void push(int stack[], int *top, int n);
 void pop(int stack[], int *top);
 void display(int stack[], int top);
 int main() {
-    printf ("Create stack using array");
+    printf ("Create stack using array\n");
+    
     int stack[MAX_SIZE], top = -1, choice, n;
 
     printf("\nEnter the size of STACK (MAX = %d): ", MAX_SIZE);

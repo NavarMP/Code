@@ -30,6 +30,8 @@ void postOrderTraversal(Node* root) {
 }
 
 int main() {
+    printf ("Traverse a binary search tree in post-order\n");
+    
     // Create a sample binary search tree
     Node* root = createNode(5);
     root->left = createNode(3);

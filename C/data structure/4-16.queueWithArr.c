@@ -85,6 +85,8 @@ void printMenu() {
 }
 
 int main() {
+    printf ("Queue using array\n");
+    
     queue.front = queue.rear = -1;
     printf("Create queue using array\n");
     int choice;

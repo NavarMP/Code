@@ -17,8 +17,9 @@ int front = -1;
 int rear = -1;
 
 int main() {
-    int choice, value;
+    printf ("Sort a singly linked list\n");
 
+    int choice, value;
     while (1) {
         printf("\n****** MENU ******\n");
         printf("1. Insert\n2. Delete\n3. Display\n4. Exit\n");

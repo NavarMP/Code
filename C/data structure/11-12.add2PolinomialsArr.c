@@ -29,6 +29,7 @@ void printPolynomial(int poly[], int degree) {
 }
 
 int main() {
+    printf ("Addition of 2 polynomials using array\n");
     int poly1[] = {3, 2, 1}; // represents 1x^2 + 2x + 3
     int poly2[] = {2, 4}; // represents 4x + 2
     int degree1 = sizeof(poly1) / sizeof(poly1[0]) - 1;

@@ -51,6 +51,8 @@ void printList(Node* head) {
 }
 
 int main() {
+    printf ("Delete a given node from a singly linked list\n");
+    
     Node* head = NULL;
 
     // Create a sample linked list: 1 -> 2 -> 3 -> 4 -> 5

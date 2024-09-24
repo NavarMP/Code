@@ -32,6 +32,8 @@ Node* searchBST(Node* root, int key) {
 }
 
 int main() {
+    prinft ("Search an element in a binary search tree\n");
+
     // Create a sample binary search tree
     Node* root = createNode(5);
     root->left = createNode(3);

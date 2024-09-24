@@ -45,9 +45,12 @@ void displayList(Node* head) {
 }
 
 int main() {
+    printf ("Create and display a singly linked list of n nodes\n");
+
     int n;
     printf("Enter the number of nodes: ");
     scanf("%d", &n);
+    
     Node* head = NULL;
     for (int i = 0; i < n; i++) {
         int data;

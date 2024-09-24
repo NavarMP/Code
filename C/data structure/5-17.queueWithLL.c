@@ -12,7 +12,10 @@ void deQueue();
 void display();
 
 int main() {
+    printf ("Queue using Linked list\n");
+
     int choice, value;
+    
     while (1) {
         printf("\n****** MENU ******\n");
         printf("1. Insert\n2. Delete\n3. Display\n4. Exit\n");

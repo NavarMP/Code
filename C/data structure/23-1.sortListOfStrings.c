@@ -24,6 +24,8 @@ void sortStrings(char** strings, int n) {
 }
 
 int main() {
+    printf ("Sort a given list of strings\n");
+    
     int n;
     printf("Enter the number of strings: ");
     scanf("%d", &n);

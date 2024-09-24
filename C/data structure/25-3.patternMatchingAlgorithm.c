@@ -35,6 +35,8 @@ int match(char text[], char pattern[]) {
 }
 
 int main() {
+    printf ("Implement Pattern matching algorithm");
+    
     char text[100];
     char pattern[100];
     int position;

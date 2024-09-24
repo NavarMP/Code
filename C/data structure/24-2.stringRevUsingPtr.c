@@ -8,6 +8,8 @@ void reverse(char*); // function prototype
 
 int main()
 {
+    printf ("Reverse a string using pointers\n");
+    
     char s[100];
     printf("Enter a string: ");
     fgets(s, sizeof(s), stdin); // replaced gets with fgets for safety

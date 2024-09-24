@@ -25,6 +25,8 @@ void insertionSort(int array[], int size) {
 }
 
 int main() {
+    printf ("Implement insertion sort\n");
+    
     int n;
     int array[MAX_ARRAY_SIZE];
 

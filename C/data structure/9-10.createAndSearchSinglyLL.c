@@ -56,6 +56,7 @@ void printList(Node* head) {
 }
 
 int main() {
+    printf ("Create a singly linked list and search an element");
     Node* head = NULL;
 
     // Create a linked list: 1 -> 2 -> 3 -> 4 -> 5

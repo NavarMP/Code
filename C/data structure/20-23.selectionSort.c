@@ -5,6 +5,7 @@
 #define MAX_ARRAY_SIZE 25
 
 int main() {
+    printf ("Implement selection sort\n");
     int count;
     int number[MAX_ARRAY_SIZE];
 

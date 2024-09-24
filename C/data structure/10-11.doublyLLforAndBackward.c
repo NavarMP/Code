@@ -62,6 +62,8 @@ void displayBackward(Node* head) {
 }
 
 int main() {
+    printf ("Create a doubly linked list of integers and display in forward and backward direction\n");
+    
     Node* head = NULL;
     insertNode(&head, 1);
     insertNode(&head, 2);

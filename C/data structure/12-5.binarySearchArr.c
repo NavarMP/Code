@@ -3,6 +3,7 @@
 #include <stdio.h>
 
 int main() {
+    printf ("Search an element in the array using binary search\n");
     int n, search, array[100];
 
     // Get the number of elements from the user
