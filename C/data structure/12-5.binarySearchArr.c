@@ -7,7 +7,7 @@ int main() {
     int n, search, array[100];
 
     // Get the number of elements from the user
-    printf("Enter the number of elements: ");
+    printf("\nEnter the number of elements: ");
     scanf("%d", &n);
 
     // Get the elements from the user

@@ -1,4 +1,4 @@
-//5. 17.Circular queue using linked list
+//5. 17.(Circular) queue using linked list
 
 #include <stdio.h>
 
@@ -12,11 +12,11 @@ void deQueue();
 void display();
 
 int main() {
-    printf ("Circular queue using Linked list\n\n");
+    printf ("Circular queue using Linked list\n");
 
     int choice, value;
 
-    printf ("Queue is now empty\n");
+    printf ("\nQueue is now empty\n");
     while (1) {
         printf("\n****** MENU ******\n");
         printf("1. Insert\n2. Delete\n3. Display\n4. Exit\n");

@@ -57,7 +57,7 @@ int main() {
     int n;
 
     // Ask the user for the number of nodes in the list
-    printf("Enter the number of nodes in the list: ");
+    printf("\nEnter the number of nodes in the list: ");
     scanf("%d", &n);
 
     // Create the linked list

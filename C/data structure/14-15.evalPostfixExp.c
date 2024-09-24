@@ -77,7 +77,7 @@ int main() {
     printf ("Evaluation of postfix expression\n");
     
     char postfix[MAX_SIZE];
-    printf("Enter a postfix expression: ");
+    printf("\nEnter a postfix expression: ");
     fgets(postfix, MAX_SIZE, stdin);
     postfix[strlen(postfix) - 1] = '\0'; // remove newline character
     int result = evaluatePostfix(postfix);

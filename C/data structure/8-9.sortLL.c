@@ -65,14 +65,16 @@ void printList(Node* head) {
 }
 
 int main() {
+    printf ("Sort a singly linked list (bubble sort)\n");
+
     Node* head = NULL;
     int numNodes;
-    printf("Enter the number of nodes: ");
+    printf("\nEnter the number of nodes: ");
     scanf("%d", &numNodes);
 
     for (int i = 0; i < numNodes; i++) {
         int data;
-        printf("Enter node %d data: ", i + 1);
+        printf("\nEnter node %d data: ", i + 1);
         scanf("%d", &data);
         insertNode(&head, data);
     }

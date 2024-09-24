@@ -29,17 +29,32 @@ void preOrderTraversal(Node* root) {
     preOrderTraversal(root->right); // traverse the right subtree
 }
 
+// Function to insert a node into the binary search tree
+Node* insertNode(Node* root, int data) {
+    if (root == NULL) {
+        return createNode(data);
+    }
+    if (data < root->data) {
+        root->left = insertNode(root->left, data);
+    } else if (data > root->data) {
+        root->right = insertNode(root->right, data);
+    }
+    return root;
+}
+
 int main() {
-    printf ("Traverse a binary search tree in pre-order\n");
-    
-    // Create a sample binary search tree
-    Node* root = createNode(5);
-    root->left = createNode(3);
-    root->right = createNode(7);
-    root->left->left = createNode(2);
-    root->left->right = createNode(4);
-    root->right->left = createNode(6);
-    root->right->right = createNode(8);
+    printf("Enter the number of nodes in the binary search tree: ");
+    int n;
+    scanf("%d", &n);
+
+    Node* root = NULL;
+
+    printf("Enter the nodes of the binary search tree (in any order):\n");
+    for (int i = 0; i < n; i++) {
+        int data;
+        scanf("%d", &data);
+        root = insertNode(root, data);
+    }
 
     printf("Pre-order traversal: ");
     preOrderTraversal(root);

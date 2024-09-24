@@ -66,7 +66,7 @@ int main() {
     
     Node* head = NULL;
     int numNodes;
-    printf("Enter the number of nodes: ");
+    printf("\nEnter the number of nodes: ");
     scanf("%d", &numNodes);
 
     for (int i = 0; i < numNodes; i++) {

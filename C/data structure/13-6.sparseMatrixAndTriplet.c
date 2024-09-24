@@ -39,9 +39,9 @@ void displayTripletRepresentation(Triplet triplets[], int count) {
 int main() {
     printf ("Read a sparse matrix and display its triplet representation using array\n");
     int rows, cols;
-    printf("Enter the number of rows: ");
+    printf("\nEnter the number of rows: ");
     scanf("%d", &rows);
-    printf("Enter the number of columns: ");
+    printf("\nEnter the number of columns: ");
     scanf("%d", &cols);
 
     Triplet triplets[rows * cols]; // maximum possible number of non-zero elements
