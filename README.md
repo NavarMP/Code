@@ -51,6 +51,12 @@
 24. Reverse a string using pointers
 25. Implement Pattern matching algorithm
 
+# Python
+
+## Data Science
+
+## AI
+
 # HTML
 
 1. lab 1
@@ -68,10 +74,4 @@
 13. lab 13
 14. lab 14
 15. lab 15
-
-# Python
-
-## Data Science
-
-## AI
 
