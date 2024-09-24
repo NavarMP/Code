@@ -65,11 +65,7 @@ void display() {
 // Function to get menu choice from user
 int getMenuChoice() {
     int choice;
-    printf("Enter your choice:\n");
-    printf("1. Enqueue\n");
-    printf("2. Dequeue\n");
-    printf("3. Display\n");
-    printf("4. Exit\n");
+    printf("Enter your choice: ");
     scanf("%d", &choice);
     return choice;
 }
@@ -81,14 +77,13 @@ void printMenu() {
     printf("1. Enqueue\n");
     printf("2. Dequeue\n");
     printf("3. Display\n");
-    printf("4. Exit\n");
+    printf("4. Exit\n\n");
 }
 
 int main() {
-    printf ("Queue using array\n");
+    printf ("Create queue using array\n\n");
     
     queue.front = queue.rear = -1;
-    printf("Create queue using array\n");
     int choice;
     while (1) {
         printMenu();
@@ -99,10 +94,12 @@ int main() {
                 printf("Enter a value to enqueue: ");
                 scanf("%d", &value);
                 enQueue(value);
+                printf ("Enqueue successfull!\n\n");
                 break;
             }
             case 2:
                 deQueue();
+                printf ("Dequeue successfull!\n\n");
                 break;
             case 3:
                 display();

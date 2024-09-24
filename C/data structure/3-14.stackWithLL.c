@@ -27,6 +27,8 @@ int main() {
     
     create();
 
+    printf ("\nThe Stack is now Empty.\n");
+
     while (1) {
         printf("\n 1 - Push");
         printf("\n 2 - Pop");
@@ -35,9 +37,9 @@ int main() {
         printf("\n 5 - Exit");
         printf("\n 6 - Display");
         printf("\n 7 - Stack Count");
-        printf("\n 8 - Destroy stack");
+        printf("\n 8 - Destroy stack\n");
 
-        printf("\n Enter choice: ");
+        printf("\nEnter a choice: ");
         scanf("%d", &choice);
 
         switch (choice) {
@@ -72,7 +74,7 @@ int main() {
                 destroy();
                 break;
             default:
-                printf(" Wrong choice, Please enter correct choice ");
+                printf(" Wrong choice, Please enter correct choice.");
                 break;
         }
     }
@@ -111,7 +113,7 @@ void display() {
 
 void pop() {
     if (top == NULL) {
-        printf("\n Error: Trying to pop from empty stack");
+        printf("\n Error: Stack underflow");
         return;
     }
     struct node *temp = top;

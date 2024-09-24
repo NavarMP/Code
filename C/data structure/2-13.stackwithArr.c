@@ -39,10 +39,10 @@ int main() {
                 display(stack, top);
                 break;
             case 4:
-                printf("\n\t EXIT POINT ");
+                printf("\n\t EXIT POINT");
                 break;
             default:
-                printf("\n\t Please Enter a Valid Choice (1/2/3/4)");
+                printf("\n\t Please Enter a valid choice (1/2/3/4)");
         }
     } while (choice != 4);
 
@@ -51,7 +51,7 @@ int main() {
 
 void push(int stack[], int *top, int n) {
     if (*top >= n - 1) {
-        printf("\n\tSTACK is overflow");
+        printf("\n\tStack overflow");
     } else {
         printf(" Enter a value to be pushed: ");
         int x;
@@ -63,7 +63,7 @@ void push(int stack[], int *top, int n) {
 
 void pop(int stack[], int *top) {
     if (*top <= -1) {
-        printf("\n\t Stack is underflow");
+        printf("\n\t Stack underflow");
     } else {
         printf("\n\t The popped element is %d", stack[*top]);
         (*top)--;
@@ -78,6 +78,6 @@ void display(int stack[], int top) {
         }
         printf("\n Press Next Choice");
     } else {
-        printf("\n The STACK is empty");
+        printf("\n The stack is empty");
     }
 }
