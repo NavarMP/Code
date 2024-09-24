@@ -51,28 +51,46 @@ void printList(Node* head) {
 }
 
 int main() {
-    printf ("Delete a given node from a singly linked list\n");
-    
-    Node* head = NULL;
+    printf("Delete a given node from a singly linked list\n");
 
-    // Create a sample linked list: 1 -> 2 -> 3 -> 4 -> 5
-    head = (Node*)malloc(sizeof(Node));
-    head->data = 1;
-    head->next = (Node*)malloc(sizeof(Node));
-    head->next->data = 2;
-    head->next->next = (Node*)malloc(sizeof(Node));
-    head->next->next->data = 3;
-    head->next->next->next = (Node*)malloc(sizeof(Node));
-    head->next->next->next->data = 4;
-    head->next->next->next->next = (Node*)malloc(sizeof(Node));
-    head->next->next->next->next->data = 5;
-    head->next->next->next->next->next = NULL;
+    Node* head = NULL;
+    int n;
+
+    // Ask the user for the number of nodes in the list
+    printf("Enter the number of nodes in the list: ");
+    scanf("%d", &n);
+
+    // Create the linked list
+    for (int i = 0; i < n; i++) {
+        int data;
+        printf("Enter data for node %d: ", i + 1);
+        scanf("%d", &data);
+
+        Node* newNode = (Node*)malloc(sizeof(Node));
+        newNode->data = data;
+        newNode->next = NULL;
+
+        if (head == NULL) {
+            head = newNode;
+        } else {
+            Node* current = head;
+            while (current->next != NULL) {
+                current = current->next;
+            }
+            current->next = newNode;
+        }
+    }
 
     printf("Original list: ");
     printList(head);
 
-    // Delete the node with key 3
-    deleteNode(&head, 3);
+    // Ask the user for the node to be deleted
+    int key;
+    printf("Enter the node to be deleted: ");
+    scanf("%d", &key);
+
+    // Delete the node
+    deleteNode(&head, key);
 
     printf("List after deletion: ");
     printList(head);
