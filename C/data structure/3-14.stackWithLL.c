@@ -18,7 +18,7 @@ void display();
 void stack_count();
 void destroy();
 void empty();
-int topelement();
+int topElement();
 
 int main() {
     printf ("Create your stack and perform operations\n");
@@ -123,7 +123,7 @@ void pop() {
     count--;
 }
 
-int topelement() {
+int topElement() {
     return top->info;
 }
 
