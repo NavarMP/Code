@@ -4,9 +4,9 @@
 
 #define MAX 20
 
-void read_matrix(int a[10][10], int row, int column);
-void print_sparse(int b[MAX][3]);
-void create_sparse(int a[10][10], int row, int column, int b[MAX][3]);
+void readMatrix(int a[10][10], int row, int column);
+void printSparse(int b[MAX][3]);
+void createSparse(int a[10][10], int row, int column, int b[MAX][3]);
 
 int main() {
     printf ("Create Sparse Matrix");
@@ -21,14 +21,14 @@ int main() {
     }
 
     int a[10][10], b[MAX][3];
-    read_matrix(a, row, column);
-    create_sparse(a, row, column, b);
-    print_sparse(b);
+    readMatrix(a, row, column);
+    createSparse(a, row, column, b);
+    printSparse(b);
 
     return 0;
 }
 
-void read_matrix(int a[10][10], int row, int column) {
+void readMatrix(int a[10][10], int row, int column) {
     int i, j;
     printf("\nEnter elements of matrix\n");
     for (i = 0; i < row; i++) {
@@ -39,7 +39,7 @@ void read_matrix(int a[10][10], int row, int column) {
     }
 }
 
-void create_sparse(int a[10][10], int row, int column, int b[MAX][3]) {
+void createSparse(int a[10][10], int row, int column, int b[MAX][3]) {
     int i, j, k = 1;
     b[0][0] = row;
     b[0][1] = column;
@@ -57,7 +57,7 @@ void create_sparse(int a[10][10], int row, int column, int b[MAX][3]) {
     b[0][2] = k - 1;
 }
 
-void print_sparse(int b[MAX][3]) {
+void printSparse(int b[MAX][3]) {
     int i, column;
     column = b[0][2];
     printf("\nSparse form - list of 3 triples\n\n");
