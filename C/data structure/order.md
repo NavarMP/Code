@@ -4,6 +4,7 @@
 1. 4.Append 2 arrays (pdf 5 [page 11])
 2. 13.Stack using array (14 [p 38])
 3. 14.Stack using Linked list (15 [p 41])
+4. Implement Sparse matrix (8)
 4. 16.Queue using array (17 [p 51])
 5. 17.(Circular) Queue using Linked list (18 [p 54])
 6. 7.Create and display a singly linked list of n nodes (not available -10 [p 20])
