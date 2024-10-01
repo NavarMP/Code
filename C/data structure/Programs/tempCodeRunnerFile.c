@@ -55,7 +55,7 @@ int main() {
                 if (top == NULL) {
                     printf("No elements in stack");
                 } else {
-                    int e = topElement();
+                    int e = topelement();
                     printf("\n Top element: %d", e);
                 }
                 break;

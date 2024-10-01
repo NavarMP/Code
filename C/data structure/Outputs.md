@@ -43,13 +43,282 @@ Enter the size of STACK (MAX = 100): 4
 
 ## 3. 14.Stack using Linked list
 
+Create your stack and perform operations
 
+The Stack is now Empty.
 
-## 4. Implement Sparse matrix
+ 1 - Push
+ 2 - Pop
+ 3 - Top
+ 4 - Empty
+ 5 - Exit
+ 6 - Display
+ 7 - Stack Count
+ 8 - Destroy stack
 
-## 5. 16.Queue using array
+Enter a choice: 1
+Enter data: 10
 
-## 6. 17.(Circular) Queue using Linked list
+ 1 - Push
+ 2 - Pop
+ 3 - Top
+ 4 - Empty
+ 5 - Exit
+ 6 - Display
+ 7 - Stack Count
+ 8 - Destroy stack
+
+Enter a choice: 1
+Enter data: 20
+
+ 1 - Push
+ 2 - Pop
+ 3 - Top
+ 4 - Empty
+ 5 - Exit
+ 6 - Display
+ 7 - Stack Count
+ 8 - Destroy stack
+
+Enter a choice: 3
+
+ Top element: 20
+ 1 - Push
+ 2 - Pop
+ 3 - Top
+ 4 - Empty
+ 5 - Exit
+ 6 - Display
+ 7 - Stack Count
+ 8 - Destroy stack
+
+Enter a choice: 6
+20 10
+
+ 1 - Push
+ 2 - Pop
+ 3 - Top
+ 4 - Empty
+ 5 - Exit
+ 6 - Display
+ 7 - Stack Count
+ 8 - Destroy stack
+
+Enter a choice: 7
+
+ No. of elements in stack: 2
+ 1 - Push
+ 2 - Pop
+ 3 - Top
+ 4 - Empty
+ 5 - Exit
+ 6 - Display
+ 7 - Stack Count
+ 8 - Destroy stack
+
+Enter a choice: 2
+
+ Popped value: 20
+ 1 - Push
+ 2 - Pop
+ 3 - Top
+ 4 - Empty
+ 5 - Exit
+ 6 - Display
+ 7 - Stack Count
+ 8 - Destroy stack
+
+Enter a choice: 4
+
+ Stack is not empty with 1 elements
+ 1 - Push
+ 2 - Pop
+ 3 - Top
+ 4 - Empty
+ 5 - Exit
+ 6 - Display
+ 7 - Stack Count
+ 8 - Destroy stack
+
+Enter a choice: 8
+
+ All stack elements destroyed
+ 1 - Push
+ 2 - Pop
+ 3 - Top
+ 4 - Empty
+ 5 - Exit
+ 6 - Display
+ 7 - Stack Count
+ 8 - Destroy stack
+
+Enter a choice: 5
+
+## 4. 16.Queue using array
+
+Create queue using array
+
+Queue Operations
+---------------
+1. Enqueue
+2. Dequeue
+3. Display
+4. Exit
+
+Enter your choice: 1
+Enter a value to enqueue: 10
+Enqueue successfull!
+
+Queue Operations
+---------------
+1. Enqueue
+2. Dequeue
+3. Display
+4. Exit
+
+Enter your choice: 20
+Invalid choice. Please try again.
+Queue Operations
+---------------
+1. Enqueue
+2. Dequeue
+3. Display
+4. Exit
+
+Enter your choice: 1
+Enter a value to enqueue: 20
+Enqueue successfull!
+
+Queue Operations
+---------------
+1. Enqueue
+2. Dequeue
+3. Display
+4. Exit
+
+Enter your choice: 3
+10 20
+Queue Operations
+---------------
+1. Enqueue
+2. Dequeue
+3. Display
+4. Exit
+
+Enter your choice: 3
+10 20
+Queue Operations
+---------------
+1. Enqueue
+2. Dequeue
+3. Display
+4. Exit
+
+Enter your choice: 2
+Removed element: 10
+Dequeue successfull!
+
+Queue Operations
+---------------
+1. Enqueue
+2. Dequeue
+3. Display
+4. Exit
+
+Enter your choice: 2
+Removed element: 20
+Dequeue successfull!
+
+Queue Operations
+---------------
+1. Enqueue
+2. Dequeue
+3. Display
+4. Exit
+
+Enter your choice: 2
+Queue is empty. Cannot remove element.
+Dequeue successfull!
+
+Queue Operations
+---------------
+1. Enqueue
+2. Dequeue
+3. Display
+4. Exit
+
+Enter your choice: 4
+Exiting...
+
+## 5. 17.(Circular) Queue using Linked list
+
+Circular queue using Linked list
+
+Queue is now empty
+
+****** MENU ******
+1. Insert
+2. Delete
+3. Display
+4. Exit
+
+Enter your choice: 1
+
+Enter the value to be inserted: 10
+
+Insertion Success!!!
+
+****** MENU ******
+1. Insert
+2. Delete
+3. Display
+4. Exit
+
+Enter your choice: 1
+
+Enter the value to be inserted: 20
+
+Insertion Success!!!
+
+****** MENU ******
+1. Insert
+2. Delete
+3. Display
+4. Exit
+
+Enter your choice: 1
+
+Enter the value to be inserted: 30
+
+Insertion Success!!!
+
+****** MENU ******
+1. Insert
+2. Delete
+3. Display
+4. Exit
+
+Enter your choice: 3
+
+Circular Queue Elements are :
+10      20      30
+****** MENU ******
+1. Insert
+2. Delete
+3. Display
+4. Exit
+
+Enter your choice: 2
+
+Deleted element : 10
+
+****** MENU ******
+1. Insert
+2. Delete
+3. Display
+4. Exit
+
+Enter your choice: 4
 
 ## 7. 7.Create and display a singly linked list of n nodes
 

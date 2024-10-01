@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 //read array elements
-void readArray (int arr[], int size) {
+void readArr (int arr[], int size) {
     printf ("Please enter array elements: ");
     for (int i = 0; i < size; i++) {
         scanf ("%d", &arr[i]);
@@ -11,7 +11,7 @@ void readArray (int arr[], int size) {
 }
 
 //print array elements
-void printArray (int arr[], int size) {
+void printArr (int arr[], int size) {
     for (int i = 0; i < size; i++) {
         printf ("%d\t", arr[i]);
     }
@@ -19,7 +19,7 @@ void printArray (int arr[], int size) {
 }
 
 //merge 2 arrays
-void mergeArrays (int a[], int b[], int merged[], int aSize, int bSize) {
+void mergeArr (int a[], int b[], int merged[], int aSize, int bSize) {
     //copy from 1st array to merged array
     for (int i = 0; i < aSize; i++) {
         merged[i] = a[i];
@@ -47,7 +47,7 @@ int main () {
     }
 
     //read elements of the 1st array
-    readArray (a, aSize);
+    readArr (a, aSize);
 
     //read the size of the 2nd array
     printf ("Please enter the size of the second array (max %d): ", maxSize);
@@ -60,14 +60,14 @@ int main () {
     }
 
     // Read the elements of the second array
-    readArray(b, bSize);
+    readArr(b, bSize);
 
     // Merge the two arrays
-    mergeArrays(a, b, merged, aSize, bSize);
+    mergeArr(a, b, merged, aSize, bSize);
 
     // Print the merged array
     printf("Merged array elements:\n");
-    printArray(merged, aSize + bSize);
+    printArr(merged, aSize + bSize);
 
     return 0;
 }
