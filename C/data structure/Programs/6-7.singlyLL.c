@@ -54,7 +54,7 @@ int main() {
     Node* head = NULL;
     for (int i = 0; i < n; i++) {
         int data;
-        printf("Enter data for node %d: ", i+1);
+        printf("Enter data for node %d: ", i);
         scanf("%d", &data);
         insertNode(&head, data);
     }
