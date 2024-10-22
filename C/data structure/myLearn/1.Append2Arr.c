@@ -49,7 +49,17 @@ void readArr (int arr[], int size) {
 }
 
 void mergeArr() {
+	int i;
 	
+	//copy 1st array to merged array
+	for (i = 0; i < aSize; i++) {
+		mergeArr [i] = a[i];
+	}
+	
+	//copy 2nd array to merged Array
+	for (i = 0; j = aSize; j < aSize + bSize; i++, j++) {
+		mergeArr[j] = b[i];
+	}
 }
 
 void printArr() {
