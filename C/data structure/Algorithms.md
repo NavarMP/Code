@@ -15,6 +15,8 @@
 
 ### 3. Print merged array using printArray function
 
+---
+
 ## 2. Stack using Array
 
 ### 1. Initialize stack
@@ -44,6 +46,8 @@
 1. Check if stack is empty.
 2. If empty, display "The stack is empty" message.
 3. If not empty, display elements in stack in reverse order.
+
+---
 
 ## 3. Stack using Linked List
 
@@ -90,32 +94,9 @@
 
 1. Return countof elements in stack
 
-## 4. Sparse Matrix Creation Algorithm
+---
 
-### 1. Input: Matrix size (rows, columns) and matrix elements
-
-### 2. Check: Ensure matrix size is within defined limits (10x10)
-
-### 3. Initialize: Create a sparse matrix b with dimensions MAX x 3
-
-### 4. Store metadata
-
-1. b[0][0]: Number of rows.
-2. b[0][1]: Number of columns.
-  
-### 5. Iterate through the input matrix a
-
-1. For each non-zero element a[i][j]:
-2. Store row index i in b[k][0].
-3. Store column index j in b[k][1].
-4. Store element value a[i][j] in b[k][2].
-5. Increment k.
-  
-### 6. Store number of non-zero elements: b[0][2] = k - 1
-
-### 7. Output: Print the sparse matrix b in the format of 3 triples (row, column, value)
-
-## 5. Queue Using Array
+## 4. Queue Using Array
 
 ### 1. Initialization
 
@@ -151,7 +132,9 @@
 - Perform corresponding operation
 - Repeat until user chooses to exit
 
-## 6. Circular Queue Using Linked List
+---
+
+## 5. Circular Queue Using Linked List
 
 ### 1. Enqueue
 
@@ -175,3 +158,83 @@
 
 - If front <= rear, print cQueue[i] for i = front to rear.
 - If front > rear, print cQueue[i] for i = front to SIZE - 1, then i = 0 to rear.
+
+---
+
+## 6. Create and display a singly linked list of n nodes
+
+### 1. Define a structure for a node that contains an integer data and a pointer to the next node.
+
+### 2. Create a function to allocate memory for a new node and initialize its data and next pointer.
+
+### 3. Create a function to insert a new node at the end of the linked list
+
+- If the list is empty, set the head to the new node.
+- Otherwise, traverse to the end of the list and link the new node.
+
+### 4. Create a function to display the linked list
+
+- Traverse the list from the head and print the data of each node.
+
+### 5. In the main function
+
+- Prompt the user for the number of nodes n.
+- For each node, prompt the user for data and insert it into the linked list.
+- Finally, display the linked list.
+
+---
+
+## 7. create a singly LL and delete a node
+
+### 1. Input: A pointer to the head of the linked list and the key (value) of the node to be deleted
+
+### 2. Check if the list is empty
+
+- If head is NULL, print "List is empty" and return.
+
+### 3. Check if the node to be deleted is the head
+
+- If head->data equals key, store head in a temporary variable (temp), update head to head->next, free temp, and return.
+
+### 4. Traverse the list
+
+- Initialize a pointer current to head.
+- While current->next is not NULL:
+- If current->next->data equals key:
+- Store current->next in a temporary variable (temp)
+- Update current->next to current->next->next.
+- Free temp and return.
+- Move current to current->next.
+
+### 5. If the node is not found
+
+- Print "Node with key [key] not found in the list"
+  
+### End
+
+---
+
+## 13. Sparse Matrix
+
+### 1. Input: Matrix size (rows, columns) and matrix elements
+
+### 2. Check: Ensure matrix size is within defined limits (10x10)
+
+### 3. Initialize: Create a sparse matrix b with dimensions MAX x 3
+
+### 4. Store metadata
+
+1. b[0][0]: Number of rows.
+2. b[0][1]: Number of columns.
+  
+### 5. Iterate through the input matrix a
+
+1. For each non-zero element a[i][j]:
+2. Store row index i in b[k][0].
+3. Store column index j in b[k][1].
+4. Store element value a[i][j] in b[k][2].
+5. Increment k.
+  
+### 6. Store number of non-zero elements: b[0][2] = k - 1
+
+### 7. Output: Print the sparse matrix b in the format of 3 triples (row, column, value)
