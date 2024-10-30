@@ -44,24 +44,26 @@ void readArr (int arr[], int size) {
 		scanf ("%d", &arr[i]);
 	}
 	printf ("\n");
-	
-	return;
 }
 
-void mergeArr() {
-	int i;
+void mergeArr(int a[], int b[], int merged[], int aSize, int bSize) {
+	int i,j;
 	
 	//copy 1st array to merged array
 	for (i = 0; i < aSize; i++) {
-		mergeArr [i] = a[i];
+		merged[i] = a[i];
 	}
 	
 	//copy 2nd array to merged Array
-	for (i = 0; j = aSize; j < aSize + bSize; i++, j++) {
-		mergeArr[j] = b[i];
+	for (i = 0, j = aSize; j < aSize + bSize; i++, j++) {
+		merged[j] = b[i];
 	}
 }
 
-void printArr() {
-	
+void printArr(int arr[], int size) {
+	int i;
+	for (i = 0; i < size; i++) {
+		printf ("%d\t", arr[i]);
+	}
+	printf ("\n");
 }
