@@ -1,4 +1,4 @@
-// 8. 9. Sort a singly linked list (bubble sort)
+// 9. Sort a singly linked list (bubble sort)
 
 #include <stdio.h>
 #include <stdlib.h>

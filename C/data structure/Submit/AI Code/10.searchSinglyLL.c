@@ -1,4 +1,4 @@
-//9. 10.Create a singly linked list and search an element
+//10. Create a singly linked list and search an element
 
 #include <stdio.h>
 #include <stdlib.h>

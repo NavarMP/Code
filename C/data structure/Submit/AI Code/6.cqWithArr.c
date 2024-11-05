@@ -1,4 +1,4 @@
-//5. 17.Circular queue using array
+//6. Circular queue using array
 
 #include <stdio.h>
 

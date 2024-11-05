@@ -1,4 +1,4 @@
-//2. 13. Stack using array
+//2. Stack using array
 
 #include <stdio.h>
 

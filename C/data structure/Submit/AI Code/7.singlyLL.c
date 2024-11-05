@@ -1,4 +1,4 @@
-//6. 7.Create and display a singly linked list of n nodes
+//7. Create and display a singly linked list of n nodes
 
 #include <stdio.h>
 #include <stdlib.h>

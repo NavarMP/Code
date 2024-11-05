@@ -1,4 +1,4 @@
-//13. 6.Read a sparse matrix and display its triplet representation using array
+//4. Read a sparse matrix and display its triplet representation using array
 
 #include <stdio.h>
 
