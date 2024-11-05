@@ -1,3 +1,5 @@
+//Stack using Array
+
 #include<stdio.h> 
 
 int stack[100], choice, n, top, x, i; 

@@ -1,3 +1,5 @@
+//Delete a given node from a singly linked list
+
 #include <stdio.h> 
 #include <stdlib.h> 
 

@@ -1,3 +1,5 @@
+//Sparce matrix and its triplet representation using array
+
 #include <stdio.h>
 
 #define MAX 100

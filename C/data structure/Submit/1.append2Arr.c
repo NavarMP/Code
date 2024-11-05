@@ -1,3 +1,5 @@
+// Append two arrays
+
 #include <stdio.h> 
 
 int main() 
