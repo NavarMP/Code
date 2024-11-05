@@ -1,4 +1,4 @@
-//4. 16.Queue using array
+//4. 16.Queue using Linked List
 
 #include <stdio.h>
 #include <stdbool.h>
