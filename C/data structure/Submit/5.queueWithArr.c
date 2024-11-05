@@ -11,8 +11,7 @@ void display();
 int queue[SIZE], front = -1, rear = -1;
 
 void main() {
-    int value, choice;
-    clrscr(); // Clear the screen (may not work on all compilers)
+    int value, choice; // Clear the screen (may not work on all compilers)
 
     while (1) {
         printf("\n\n***** MENU *****\n");

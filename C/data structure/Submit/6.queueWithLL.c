@@ -10,7 +10,7 @@ struct Node {
 // Queue structure 
 struct Queue { 
     struct Node *front, *rear; 
-}; 
+};
  
 // Function to create a new node 
 struct Node* newNode(int data) { 
