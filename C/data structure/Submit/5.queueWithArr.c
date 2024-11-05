@@ -10,7 +10,7 @@ void display();
 
 int queue[SIZE], front = -1, rear = -1;
 
-void main() {
+int main() {
     int value, choice; // Clear the screen (may not work on all compilers)
 
     while (1) {
